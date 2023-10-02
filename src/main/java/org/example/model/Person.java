@@ -1,11 +1,13 @@
 package org.example.model;
-
+import java.sql.ResultSet;
 import java.util.Objects;
-
 public class Person {
     private int id;
     private String firstName;
     private String lastName;
+
+    public static Person fromResultSet(ResultSet result) {
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -22,7 +24,7 @@ public class Person {
 
     private String email;
 
-    public Person(int id ,String firstName, String lastName,String email) {
+    public Person(int id ,String firstName, String lastName) {
         this.id = id;
         setFirstname(firstName);
         setLastname(lastName);
